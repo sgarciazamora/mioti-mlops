@@ -2,11 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+*/mlruns/*
 # C extensions
 *.so
-
+dataset.csv
+*.db
 # Distribution / packaging
+.vscode/
+.idea/
 .Python
 build/
 develop-eggs/
