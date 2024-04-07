@@ -119,8 +119,9 @@ def heart_prediction(message: dict):
     # Data Prep
     data = data_prep(message)
     label = model.predict(data)[0]
-
     return {'label': int(label)}
+
+
 
 @app.get('/')
 def main():
@@ -129,4 +130,5 @@ def main():
 @app.post('/heart-attack-prediction/')
 def predict_heart_attack(message: dict):
     model_pred = heart_prediction(message)
-    return {'prediction': model_pred}
+    # return {'prediction': model_pred}
+    return model_pred
